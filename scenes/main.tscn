@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://q6sq11ubvnyb"]
+
+[ext_resource type="PackedScene" uid="uid://dc5jieg81710v" path="res://scenes/floor.tscn" id="1_8pdrw"]
+[ext_resource type="PackedScene" uid="uid://cxoa2pw5fs16a" path="res://scenes/player.tscn" id="2_gepau"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_8pdrw")]
+collision_mask = 3
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Player" parent="." instance=ExtResource("2_gepau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.3225, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.925626, 0.378279, 0.0109958, 0.109811, 0.240668, 0.964376, 0.362157, 0.893859, -0.264308, 38.3043, 96.0118, -126.905)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.18422e-08, -0.451127, 0.89246, -1.26457e-08, 0.89246, 0.451127, -1, 7.5904e-09, -4.30473e-08, 23.7481, 24.0773, 0)
